@@ -84,16 +84,18 @@ resource "aws_cloudwatch_log_group" "lambda_logs" {
 }
 
 # Optional: Lambda Function URL (for easy HTTP access)
+# WARNING: This configuration is for development/demo purposes only
+# For production, restrict CORS to specific origins and use AWS_IAM authorization
 resource "aws_lambda_function_url" "lambda_url" {
   count              = var.enable_function_url ? 1 : 0
   function_name      = aws_lambda_function.duckdb_lambda.function_name
-  authorization_type = "NONE"
+  authorization_type = "NONE"  # Change to "AWS_IAM" for production
 
   cors {
     allow_credentials = true
-    allow_origins     = ["*"]
-    allow_methods     = ["*"]
-    allow_headers     = ["date", "keep-alive"]
+    allow_origins     = ["*"]  # Restrict to specific domains in production
+    allow_methods     = ["POST"]  # Only allow necessary methods
+    allow_headers     = ["date", "keep-alive", "content-type"]
     expose_headers    = ["keep-alive", "date"]
     max_age          = 86400
   }
