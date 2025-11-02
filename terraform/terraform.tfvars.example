@@ -1,0 +1,10 @@
+# Example Terraform variables configuration
+# Copy this file to terraform.tfvars and customize the values
+
+aws_region          = "us-east-1"
+environment         = "dev"
+function_name       = "juanmgart-duckdb-lambda"
+lambda_timeout      = 60
+lambda_memory_size  = 512
+log_retention_days  = 7
+enable_function_url = true
