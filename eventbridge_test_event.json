@@ -1,0 +1,22 @@
+{
+  "version": "0",
+  "id": "test-event-id",
+  "detail-type": "Object Created",
+  "source": "aws.s3",
+  "account": "634614730521",
+  "time": "2025-11-02T05:50:00Z",
+  "region": "us-east-1",
+  "detail": {
+    "version": "0",
+    "bucket": {
+      "name": "jgarteag-processor-csv-files-6db1c74b"
+    },
+    "object": {
+      "key": "debug_final_1762063043.csv",
+      "size": 576,
+      "etag": "test-etag"
+    },
+    "request-id": "test-request-id",
+    "requester": "634614730521"
+  }
+}

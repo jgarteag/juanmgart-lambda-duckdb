@@ -1,0 +1,9 @@
+{
+  "Records": [
+    {
+      "Sns": {
+        "Message": "{\"Records\":[{\"s3\":{\"bucket\":{\"name\":\"jgarteag-processor-csv-files-6db1c74b\"},\"object\":{\"key\":\"sample_data.csv\"}}}]}"
+      }
+    }
+  ]
+}

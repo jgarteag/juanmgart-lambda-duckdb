@@ -12,3 +12,13 @@ output "lambda_invoke_arn" {
   description = "Invoke ARN of the Lambda function"
   value       = aws_lambda_function.main.invoke_arn
 }
+
+output "s3_bucket_name" {
+  description = "Name of the S3 bucket for CSV files"
+  value       = aws_s3_bucket.csv_files.bucket
+}
+
+output "eventbridge_rule_arn" {
+  description = "ARN of the EventBridge rule"
+  value       = aws_cloudwatch_event_rule.s3_csv_upload.arn
+}

@@ -1,6 +1,6 @@
-# Lambda + DuckDB Project
+# CSV Processor Lambda Project
 
-Proyecto hands-on para desplegar una función Lambda con DuckDB usando Terraform.
+Proyecto hands-on para desplegar una función Lambda que procesa archivos CSV usando Terraform.
 
 ## Prerrequisitos
 
@@ -19,7 +19,7 @@ Proyecto hands-on para desplegar una función Lambda con DuckDB usando Terraform
    ```hcl
    aws_region = "us-east-1"
    aws_profile = "tu-perfil-aws"
-   project_name = "lambda-duckdb"
+   project_name = "csv-processor"
    ```
 
 ## Despliegue
@@ -34,7 +34,7 @@ terraform apply
 ## Prueba
 
 ```bash
-aws lambda invoke --function-name lambda-duckdb-lambda --profile tu-perfil response.json
+aws lambda invoke --function-name csv-processor-lambda --profile tu-perfil response.json
 cat response.json
 ```
 
